@@ -10,7 +10,9 @@
       <h2>JAVA與資料結構</h2>
     </article>
   </div>
-  <parts :class="{ishide:isact==false}" class="test"></parts>
+  <div :class="{ishide:isact==false}">
+    <parts class="test"></parts>
+  </div>
 </template>
 <script>
 import parts from './components/class.vue'

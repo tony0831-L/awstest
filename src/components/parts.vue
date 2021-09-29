@@ -7,7 +7,7 @@
 <script>
 export default {
     name:"part",
-    props: ['title']
+    props: ['title'],
 }
 </script>
 

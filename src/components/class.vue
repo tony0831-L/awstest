@@ -1,7 +1,7 @@
 <template>
     <div class="parts">
-        <part v-for="(i,index) in part" :key="index" :title="i"></part>
-        <i class="bi bi-caret-right-fill"></i>
+        <part v-for="(i,index) in part" :key="index" :title="i" v-show="index<nts&&index>=nts-3"></part>
+        <i class="bi bi-caret-right-fill" @click="next" ></i>
     </div>
 </template>
 
@@ -11,7 +11,17 @@ export default {
     name:"parts",
     data(){
         return{
-            part:["Ch41 java起步","Part2 陣列(一)","Part 3 函數"]
+            nts:3,
+            part:["Part 1 流程","Part2 陣列(一)","Part 3 函數","Part 4 物件","Part 5 陣列(二)","Part 6 樹(一)"]
+        }
+    },
+    methods:{
+        next(){
+            if (this.nts!=6) {
+                this.nts*=2
+            }else{
+                this.nts=3
+            }
         }
     },
     components:{

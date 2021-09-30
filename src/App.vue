@@ -13,9 +13,11 @@
   <div :class="{ishide:isact==false}">
     <parts class="test"></parts>
   </div>
+  <page :page="'/pages/pageCh41.htm'"></page>
 </template>
 <script>
 import parts from './components/class.vue'
+import page from './components/pageshower.vue'
 export default {
   name: 'App',
   data(){
@@ -24,7 +26,8 @@ export default {
     }
   },
   components:{
-    parts
+    parts,
+    page
   },
   methods:{
     guild(){

@@ -11,6 +11,7 @@
 
 <script>
 import part from './parts.vue'
+import bus from './components/bus.ts'
 export default {
     name:"parts",
     data(){
@@ -42,9 +43,9 @@ export default {
         },
         gotopage(page){
             if(page=="Ch41 java起步"){
-                location.href="../pages/pageCh41.htm"
+                bus.emit('page',41)
             }else if(page=="Ch42 直線型的程式"){
-                location.href="../pages/pageCh42.htm"
+                bus.emit('page',42)
             }else{
                 alert("comming soon")
             }

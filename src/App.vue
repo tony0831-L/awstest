@@ -13,11 +13,11 @@
   <div :class="{ishide:isact==false}">
     <parts class="test"></parts>
   </div>
-  <page :page="'/pages/pageCh41.htm'"></page>
+  <pageviwer></pageviwer>
 </template>
 <script>
 import parts from './components/class.vue'
-import page from './components/pageshower.vue'
+import pageviwer from './components/pageviwer.vue'
 export default {
   name: 'App',
   data(){
@@ -27,7 +27,7 @@ export default {
   },
   components:{
     parts,
-    page
+    pageviwer,
   },
   methods:{
     guild(){

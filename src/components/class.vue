@@ -11,7 +11,7 @@
 
 <script>
 import part from './parts.vue'
-import bus from './components/bus.ts'
+import bus from './bus.ts'
 export default {
     name:"parts",
     data(){
@@ -46,6 +46,14 @@ export default {
                 bus.emit('page',41)
             }else if(page=="Ch42 直線型的程式"){
                 bus.emit('page',42)
+            }else if(page=="Ch43 單層迴圈"){
+                bus.emit('page',43)
+            }else if(page=="Ch44 雙層迴圈"){
+                bus.emit('page',44)
+            }else if(page=="Ch46 分支"){
+                bus.emit('page',46)
+            }else if(page=="Ch46a 特殊技巧"){
+                bus.emit('page',"46a")
             }else{
                 alert("comming soon")
             }

@@ -1,5 +1,6 @@
 <template>
-  <div class="wraper" @click="guild">
+  <div v-show="!isreading">
+      <div class="wraper" @click="guild">
     <header>
       <h1>Java編程培訓</h1>
       <h2>作者:Dr. Heh-Tyan Liaw</h2>
@@ -13,16 +14,19 @@
   <div :class="{ishide:isact==false}">
     <parts class="test"></parts>
   </div>
+  </div>
   <pageviwer></pageviwer>
 </template>
 <script>
 import parts from './components/class.vue'
 import pageviwer from './components/pageviwer.vue'
+import bus from './components/bus.ts'
 export default {
   name: 'App',
   data(){
     return{
-      isact:false
+      isact:false,
+      isreading:false,
     }
   },
   components:{
@@ -33,11 +37,21 @@ export default {
     guild(){
       this.isact=!this.isact
     }
+  },
+  mounted(){
+      bus.on('status',status=>{
+      if(status == 'read'){
+        this.isreading=true;
+      }else if(status == 'back'){
+        this.isreading=false;
+      }
+    })
   }
 }
 </script>
 
 <style>
+@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
 *{
   margin: 0px;
   padding: 0px;

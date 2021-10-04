@@ -12,6 +12,7 @@
     "aws-amplify": "^4.3.0",
     "core-js": "^3.6.5",
     "mitt": "^3.0.0",
+    "ts": "^0.2.2",
     "vue": "^3.0.0"
   },
   "devDependencies": {
